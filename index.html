@@ -41,14 +41,29 @@
 
     <section class="photos">
       <h2>Some of My Happy Guests</h2>
-      <img src="images/dog1.jpg" alt="Small white dog laying on grass">
-      <img src="images/dog2.jpg" alt="Brown fluffy dog smiling">
-      <img src="images/dog3.jpg" alt="Dog wearing a red scarf">
-      <img src="images/dog4.jpg" alt="Small dog on a couch">
-      <img src="images/dog5.jpg" alt="Cute pup with big ears">
-      <img src="images/dog7.jpg" alt="Dog resting in a sunny yard">
-      <img src="images/dog8.jpg" alt="Small black-and-white dog">
-      <img src="images/dog9.jpg" alt="Tiny dog wagging its tail">
+      <div class="photo-gallery">
+        <!-- Первые 6 фото всегда видны -->
+        <img src="images/dog12.jpg" alt="Dogs with Sopia">
+        <img src="images/dog11.jpg" alt="Dog Cooper">
+        <img src="images/dog1.jpg" alt="Small white and black dog">
+        <img src="images/dog2.jpg" alt="Brown fluffy dog smiling">
+        <img src="images/dog3.jpg" alt="Dog wearing a red scarf">
+        <img src="images/dog4.jpg" alt="Small dog on a couch">
+        <div class="wide-photo">
+          <img src="images/dog10.jpg" alt="Three dogs on a couch">
+        </div>
+          <!-- Остальные фото изначально скрыты -->
+          <div class="more-photos hidden">            
+            <img src="images/dog5.jpg" alt="Cute pup with big ears">
+            <img src="images/dog7.jpg" alt="Dog resting in a sunny yard">
+            <img src="images/dog8.jpg" alt="Small dog sleeping">
+            <img src="images/dog9.jpg" alt="Dog on the walk">
+          </div>
+      <!-- Кнопка Показать больше -->
+      <div class="toggle-wrapper">
+        <button onclick="togglePhotos()" id="toggleBtn">📸 Показать больше</button>
+      </div>
+    </div>
     </section>
 
   <section class="location">
@@ -77,6 +92,10 @@
  <blockquote>
     "If you want your dog to feel like they’re at a 5-star resort, bring them to Sofia! My dog is always excited to visit — it’s like a second home."  
     <br><strong>– Vlad V.</strong>
+  </blockquote>  
+   <blockquote>
+    "I highly recommend Sofia to anyone looking for a trustworthy and caring pet sitter. She is very responsible, and attentive. She kept me updated, his futures pictures and messages, which gave me peace of mind."  
+    <br><strong>– Anna</strong>
   </blockquote>  
   <blockquote>
     "Best responsible dog sitter ever …And you can feel you are more then welcome in her home and my dog feels her love for dogs!!!!"  
@@ -141,6 +160,25 @@ function closeAllPopups() {
       backToTop.style.display = 'none';
     }
   });
+    function showMorePhotos() {
+    const morePhotos = document.querySelector('.more-photos');
+    morePhotos.classList.remove('hidden');
+
+    const button = document.querySelector('.show-more-btn');
+    button.style.display = 'none'; // скрыть кнопку
+  }
+  function togglePhotos() {
+      const morePhotos = document.querySelector('.more-photos');
+      const button = document.getElementById('toggleBtn');
+
+      if (morePhotos.classList.contains('hidden')) {
+        morePhotos.classList.remove('hidden');
+        button.textContent = '📂 Скрыть фото';
+      } else {
+        morePhotos.classList.add('hidden');
+        button.textContent = '📸 Показать больше';
+      }
+  }
 </script>
 
  </body>
