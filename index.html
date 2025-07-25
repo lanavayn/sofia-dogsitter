@@ -70,9 +70,9 @@
             <img src="images/dog8.jpg" alt="Small dog sleeping">
             <img src="images/dog9.jpg" alt="Dog on the walk">
           </div>
-      <!-- Кнопка Показать больше -->
+      <!-- Кнопка Show More -->
       <div class="toggle-wrapper">
-        <button onclick="togglePhotos()" id="toggleBtn">📸 Показать больше</button>
+        <button onclick="togglePhotos()" id="toggleBtn">📸 Show Gallery</button>
       </div>
     </div>
     </section>
@@ -184,10 +184,10 @@ function closeAllPopups() {
 
       if (morePhotos.classList.contains('hidden')) {
         morePhotos.classList.remove('hidden');
-        button.textContent = '📂 Скрыть фото';
+        button.textContent = '📂 Hide Gallery';
       } else {
         morePhotos.classList.add('hidden');
-        button.textContent = '📸 Показать больше';
+        button.textContent = '📸 Show Gallery';
       }
   }
 </script>
