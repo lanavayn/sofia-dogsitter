@@ -23,12 +23,15 @@
       <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
   </head>
 
-    <body id="top">
+  <body id="top">
 
   <header>
   <div class="header-content">
     <img src="images/dog0.jpg" alt="Cute Dog" class="header-img">
     <h1>Welcome to Sofia's Dog Sitting Service</h1>
+    <div class="share-button">
+      <button onclick="shareSite()">📤 Share this site</button>
+    </div>
   </div>
   <p>Loving care for your small dogs in Tiny 🐶</p>
 </header>
@@ -87,6 +90,9 @@
     </p>
   </section>
 
+    <div class="share-button">
+      <button onclick="shareSite()">📤 Recommend to a friend</button>
+    </div>
 
     <section class="contact">
       <h2>Contact</h2>
@@ -195,6 +201,20 @@ function closeAllPopups() {
         morePhotos.classList.add('hidden');
         button.textContent = '📸 Show Gallery';
       }
+  }
+</script>
+
+<script>
+  function shareSite() {
+    if (navigator.share) {
+      navigator.share({
+        title: "Sofia's Dog Sitting Service",
+        text: "Check out Sofia's loving dog sitting service 🐾",
+        url: window.location.href
+      });
+    } else {
+      alert("Sharing is not supported on this browser.");
+    }
   }
 </script>
 

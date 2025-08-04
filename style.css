@@ -274,3 +274,23 @@ html {
   border-radius: 12px;
   margin: 20px 0;
 }
+.share-button {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.share-button button {
+  background-color: #ffa726;
+  border: none;
+  padding: 10px 18px;
+  font-size: 16px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+.share-button button:hover {
+  background-color: #fb8c00;
+}
