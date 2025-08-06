@@ -10,12 +10,22 @@ body {
 
 /* Header */
 header {
-  background-color: #ffb347;
-  padding: 30px 20px;
   text-align: center;
   color: white;
 }
-
+.orange-box {
+  background-color: #ffb347;
+  color: white;
+  padding: 60px 20px 30px; /* ⬅ increased top padding */
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  position: relative;
+}
+header .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
 header h1 {
   margin: 0;
   font-size: 2em;
@@ -293,4 +303,15 @@ html {
 
 .share-button button:hover {
   background-color: #fb8c00;
+}
+.orange-box {
+  position: relative;
+}
+
+.share-button.top-right {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  margin: 0;
+  text-align: right;
 }
