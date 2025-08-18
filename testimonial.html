@@ -14,7 +14,7 @@
   </header>
 
   <section class="testimonial-form">
-    <form name="testimonial" method="POST" data-netlify="true" honeypot="bot-field" onsubmit="showConfirmation(event)">
+    <form name="testimonial" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="testimonial">
 
       <p style="display:none">
@@ -28,11 +28,12 @@
 
       <div class="form-group">
         <label for="message">Your Testimonial:</label>
-        <textarea id="message" name="testimonial" rows="4" required></textarea>
+        <textarea id="message" name="message" rows="4" required></textarea>
       </div>
 
       <button type="submit">Submit</button>
     </form>
+
 
     <div id="confirmation" style="display:none; margin-top: 20px; font-weight: bold; color: green;">
       🎉 Thank you for your testimonial!!!
