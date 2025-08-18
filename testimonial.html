@@ -14,7 +14,13 @@
   </header>
 
   <section class="testimonial-form">
-    <form name="testimonial" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <form name="testimonial"
+      method="POST"
+      action="https://hooks.zapier.com/hooks/catch/24224449/u6py8oi/"
+      data-netlify="true"
+      honeypot="bot-field"
+      onsubmit="showConfirmation(event)">
+
       <input type="hidden" name="form-name" value="testimonial">
 
       <p style="display:none">
