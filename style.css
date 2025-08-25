@@ -231,6 +231,13 @@ html {
   object-fit: cover;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+.photo-gallery video.gallery-video {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 
 .hidden {
   display: none;
