@@ -231,6 +231,13 @@ html {
   object-fit: cover;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+.photo-gallery video.gallery-video {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 
 .hidden {
   display: none;
@@ -314,4 +321,72 @@ html {
   right: 5px;
   margin: 0;
   text-align: right;
+}
+/* Header quick actions */
+.header-actions {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.header-actions .call-button,
+.header-actions .share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;       /* smaller height like Share */
+  font-size: 15px;         /* match sizes */
+  line-height: 1;          /* remove extra vertical space */
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.15);
+  cursor: pointer;
+  white-space: nowrap;      /* keep label on one line */
+  vertical-align: middle;
+}
+/* AFTER (global button styles) */
+.call-button,
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;     /* small like Share */
+  font-size: 15px;
+  line-height: 1;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.15);
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+/* Distinct brand colors for clarity */
+.call-button {
+  background: #10b981; /* green */
+}
+.call-button:hover { background: #0ea371; }
+
+.share-btn {
+  background: #fb923c; /* orange (matches brand) */
+}
+.share-btn:hover { background: #f97316; }
+
+/* Mobile: make tap targets comfy and avoid overlap with title */
+@media (max-width: 600px) {
+  .header-actions {
+    top: 8px;
+    right: 8px;
+    gap: 8px;
+  }
+  .call-button, .share-btn {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
 }
