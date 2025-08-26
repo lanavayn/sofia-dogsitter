@@ -30,8 +30,14 @@
       <div class="header-content">
         <img src="images/dog0.jpg" alt="Cute Dog" class="header-img">
         <h1>Welcome to Sofia's Dog Sitting Service</h1>
-        <div class="share-button top-right">
-          <button onclick="shareSite()">📤 Share</button>
+        <!-- NEW: header actions (Call + Share) -->
+        <div class="header-actions top-right" role="group" aria-label="Quick actions">
+          <a href="tel:+14169177471" class="call-button" aria-label="Call Sofia now">
+            📞 Call
+          </a>
+          <button type="button" class="share-btn" onclick="shareSite()" aria-label="Share this site">
+            📤 Share
+          </button>
         </div>
       </div>
       <p>Loving care for your small dogs in Tiny 🐶</p>
