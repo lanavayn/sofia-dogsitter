@@ -349,7 +349,24 @@ html {
   white-space: nowrap;      /* keep label on one line */
   vertical-align: middle;
 }
-
+/* AFTER (global button styles) */
+.call-button,
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;     /* small like Share */
+  font-size: 15px;
+  line-height: 1;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.15);
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: middle;
+}
 /* Distinct brand colors for clarity */
 .call-button {
   background: #10b981; /* green */
